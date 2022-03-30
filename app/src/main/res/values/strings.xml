@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">マイナンバーカード デモアプリ</string>
+
+    <string name="text_ap">券面事項入力補助AP</string>
+    <string name="text_ap_explanation">暗証番号を入力してから接続ボタンを押してください</string>
+    <string name="set_auth_cert">認証用証明書の登録</string>
+    <string name="set_auth_cert_explanation">接続ボタンを押してください</string>
+    <string name="auth_test">認証テスト</string>
+    <string name="auth_test_explanation">暗証番号を入力してから接続ボタンを押してください</string>
+    <string name="passcode">暗証番号</string>
+    <string name="result">結果</string>
+    <string name="please_touch_card">マイナンバーカードをかざしてください</string>
+    <string name="please_wait">通信中です…</string>
+    <string name="connect">接続</string>
+</resources>

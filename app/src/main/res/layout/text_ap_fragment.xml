@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.text_ap.TextApFragment">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="viewModel"
+            type="com.ishihata_tech.myna_card_demo.ui.text_ap.TextApViewModel"/>
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/text_ap_explanation"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/passcode"/>
+        <EditText
+            android:id="@+id/edit_pin"
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:autofillHints="password"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:text="@={viewModel.pin}"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.MaterialComponents.Button"
+            android:text="@string/connect"
+            android:enabled="@{viewModel.pin.length() == 4}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/result"/>
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/result_box"
+            android:padding="4dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

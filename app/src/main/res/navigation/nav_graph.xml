@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.ishihata_tech.myna_card_demo.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_textApFragment"
+            app:destination="@id/textApFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_setAuthCertificateFragment"
+            app:destination="@id/setAuthCertificateFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_authFragment"
+            app:destination="@id/authFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/textApFragment"
+        android:name="com.ishihata_tech.myna_card_demo.ui.text_ap.TextApFragment"
+        android:label="text_ap_fragment"
+        tools:layout="@layout/text_ap_fragment" />
+    <fragment
+        android:id="@+id/setAuthCertificateFragment"
+        android:name="com.ishihata_tech.myna_card_demo.ui.set_auth_certificate.SetAuthCertificateFragment"
+        android:label="set_auth_certificate_fragment"
+        tools:layout="@layout/set_auth_certificate_fragment" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.ishihata_tech.myna_card_demo.ui.auth.AuthFragment"
+        android:label="auth_fragment"
+        tools:layout="@layout/auth_fragment" />
+</navigation>
